@@ -1,0 +1,13 @@
+package com.postinfo.Interfaces;
+
+import com.postinfo.model.ModelComment;
+
+import retrofit2.Call;
+import retrofit2.http.Header;
+import retrofit2.http.POST;
+import retrofit2.http.Query;
+
+public interface getAttachPeople {
+    @POST("./users/posts/mentions/all")
+    Call<ModelComment> getMarked(@Header("Authorization")String token, @Query("id") String id);
+}
